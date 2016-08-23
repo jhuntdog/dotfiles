@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 if [[ ! "${prompt_colors[@]}" ]]; then
   prompt_colors=(
     "36" # information color
