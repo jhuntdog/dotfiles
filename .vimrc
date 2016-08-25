@@ -68,15 +68,11 @@ set expandtab " Expand tabs to spaces
 " Reformatting
 set nojoinspaces " Only insert single space after a '.', '?' and '!' with a join command.
 
-" Toggle show tabs and trailing spaces (,c)
-if has('win32')
-  set listchars=tab:>\ ,trail:.,eol:$,nbsp:_,extends:>,precedes:<
-else
-  set listchars=tab:▸\ ,trail:·,eol:¬,nbsp:_,extends:>,precedes:<
-endif
-"set listchars=tab:>\ ,trail:.,eol:$,nbsp:_,extends:>,precedes:<
-"set fillchars=fold:-
-nnoremap <silent> <leader>v :call ToggleInvisibles()<CR>
+" Toggle show tabs and trailing spaces (,c) {{{
+set lcs=tab:›\ ,trail:·,eol:¬,nbsp:_
+set fcs=fold:-
+nnoremap <silent> <leader>c :set nolist!<CR>
+" }}}
 
 " Extra whitespace
 autocmd vimrc BufWinEnter * :2match ExtraWhitespaceMatch /\s\+$/
