@@ -7,10 +7,10 @@ nnoremap k gk
 
 " Local dirs
 if !has('win32')
-  set backupdir=$DOTFILES/caches/vim
-  set directory=$DOTFILES/caches/vim
-  set undodir=$DOTFILES/caches/vim
-  let g:netrw_home = expand('$DOTFILES/caches/vim')
+  set backupdir=~/.dotfiles/caches/vim
+  set directory=~/.dotfiles/caches/vim
+  set undodir=~/.dotfiles/caches/vim
+  let g:netrw_home = expand('~/.dotfiles/caches/vim')
 endif
 
 " Create vimrc autocmd group and remove any existing vimrc autocmds,
